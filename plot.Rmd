@@ -1,0 +1,24 @@
+---
+title: 'Peer-graded Assignment: R Markdown Presentation & Plotly'
+author: "Bojan Brajkovic"
+date: "13/10/2018"
+output:
+  ioslides_presentation: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## plotly plot
+
+```{r, echo = FALSE, fig.align = 'center', message = FALSE, warning=FALSE}
+library(plotly)
+p <- plot_ly(mtcars, x = mtcars$disp, y = mtcars$mpg, size = mtcars$wt, 
+        color = as.factor(mtcars$cyl))
+p
+```
+
+
